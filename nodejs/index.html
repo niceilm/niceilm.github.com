@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nodejs niceilm's devnote</title>
+    <meta name="description" content="to be full stack programmer">
+    <meta name="author" content="niceilm">
+    <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="niceilm's devnote" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="canonical" href="http://page.niceilm.net">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/apps/toc.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about-me/">about me</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/android/">android</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/frontend/">frontend</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/git/">git</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ios/">ios</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nodejs/">nodejs</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ocw/">ocw</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/openapi/">openapi</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="social">
+                
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+<link href="/css/code/default.css" rel="stylesheet">
+
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://page.niceilm.net/nodejs/" data-via="niceilm" data-hashtags="">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
+                    </li>
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="http://page.niceilm.net/nodejs/"></div>
+                    </li>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
+                    </li>
+                </ul>
+                <p><a href="http://www.nodejs.org/">nodejs</a></p>
+<h1 id="toc_208">article</h1>
+<p><a href="http://blog.doortts.com/253">node.js를 학습하는 사람이라면 꼭 봐둬야 할 Node.js 소개 동영상 해설</a><br>
+<a href="http://blog.doortts.com/214">그래서, node.js는 무엇인가?</a><br>
+<a href="http://nodejs-kr.org/insidejs/archives/457">node에서 모듈 로드하기</a><br>
+<a href="http://nodejs-kr.org/insidejs/archives/467">node.js의 connect 이해하기</a><br>
+<a href="http://nodejs-kr.org/insidejs/archives/531">[번역] node.js에서 비동기로 코드 디자인하기.</a><br>
+<a href="http://kunklejr.github.com/nodejs-explained-pres/#/title">심플하게 설명</a><br>
+<a href="http://deview.kr/2012/xe/index.php?mid=track&amp;document_srl=417&amp;time_srl=267">deview2012 - nodejs</a></p>
+<h1 id="toc_209">install</h1>
+<p><a href="http://blog.niceilm.net/150151245593">ubuntu 에서 apt-get 을 이용해서 nodejs 최신 버전 설치하기</a><br>
+<a href="http://blog.niceilm.net/150151905918">install nodejs for windows</a>  </p>
+<h1 id="toc_210">API</h1>
+<p><a href="http://nodejs.sideeffect.kr/docs/">한글 API 문서</a></p>
+<h1 id="toc_211">guide manual</h1>
+<p><a href="http://www.nodebeginner.org/index-kr.html">The Node Beginner Book</a><br>
+<a href="http://pismute.github.com/nodeguide.com/index.html">Felix&#39;s Node.js Guide</a><br>
+<a href="http://book.mixu.net/">mixu node book</a><br>
+<a href="http://octoberskyjs.github.com/home/">node.js kr</a>  </p>
+<h1 id="toc_212">npm</h1>
+<p><a href="https://github.com/joyent/node/wiki/modules">node modules</a><br>
+<a href="http://nodejs-kr.org/insidejs/archives/449">npm 1.0 간단정리</a><br>
+<a href="http://blog.doortts.com/225">npm faq</a><br>
+<a href="http://blog.doortts.com/226">[node basic] npm: 글로벌 vs 로컬 설치 (Global vs Local installation)</a><br>
+<a href="http://dogfeet.github.com/articles/2012/npm-tricks.html">npm-tricks</a><br>
+<a href="http://kyungw00k.wordpress.com/2011/06/21/npm-private-repository-%EB%A7%8C%EB%93%A4%EA%B8%B0/">NPM Private Repository 만들기</a></p>
+<h1 id="toc_213">common.js</h1>
+<p><a href="http://blog.sangpire.pe.kr/tag/Commonjs">CommonJS, node.js의 모듈 규칙</a></p>
+<h1 id="toc_214">hosting</h1>
+<p><a href="http://blog.niceilm.net/150151905384">cloudfoundry</a></p>
+<h1 id="toc_215">tip</h1>
+<p><a href="http://nodeqa.com/nodejs_ref/7">module.exports === exports -&gt; true, 하지만, call by reference를 지키지 않으면 안된다.</a><br>
+<a href="http://nodeqa.com/nodejs_ref/3">프로세스의 흐름 (Control Flow)을 관리하여 가독성 높은 코드를 작성해보자.</a><br>
+<a href="http://nodeqa.com/nodejs_ref/5">beautiful logging winston</a><br>
+<a href="http://nodeqa.com/nodejs_ref/19">Domain API (또다른 try ~ catch)</a><br>
+<a href="http://nodeqa.com/nodejs_ref/6">Node.js 는 단일쓰레드만 있다? 비동기 I/O에 대해서 제대로 알아보자. (libeio, libev)</a><br>
+<a href="http://nodeqa.com/nodejs_ref/1">node exception error handling (Node.JS가 죽어? 당연히 죽지 않게 해야죠.)</a><br>
+<a href="http://blog.mixu.net/2011/02/02/essential-node-js-patterns-and-snippets/">Essential node.js patterns</a><br>
+<a href="http://stella.laurenzo.org/2011/03/bulletproof-node-js-coding/">bulletproof-node-js-coding</a>  </p>
+<h1 id="toc_216">debugging</h1>
+<p><a href="https://github.com/dannycoates/node-inspector">node-inspector</a>  </p>
+<h1 id="toc_217">web framework</h1>
+<p><a href="http://expressjs.com/">expressjs</a><br>
+<a href="http://firejune.io/express/">express 2.x 한글 매뉴얼</a><br>
+<a href="https://github.com/meteor/meteor">meteor</a>  </p>
+<h1 id="toc_218">template framework</h1>
+<p><a href="http://handlebarsjs.com/">handlebars js</a><br>
+<a href="https://github.com/visionmedia/jade">jade</a><br>
+<a href="http://blog.doortts.com/223">Jade - 템플릿 엔진 for Node.js</a>  </p>
+<h1 id="toc_219">persistence framework</h1>
+<p><a href="http://nodejs-kr.org/insidejs/archives/536">Mongoose</a></p>
+<h1 id="toc_220">test</h1>
+<p><a href="http://visionmedia.github.com/expresso/">expresso</a><br>
+<a href="http://blog.doortts.com/213">Node.js TDD 프레임워크 Expresso 매뉴얼 번역</a><br>
+<a href="http://vowsjs.org/">vows</a><br>
+<a href="http://blog.doortts.com/220">바우즈(Vows), node.js를 위한 비동기 행위 주도 개발(BDD) 프레임워크</a><br>
+<a href="https://github.com/assaf/zombie">zombie</a>  </p>
+<h1 id="toc_221">auto restart</h1>
+<p><a href="https://github.com/isaacs/node-supervisor">supervisor</a>  </p>
+<h1 id="toc_222">build</h1>
+<p><a href="http://gruntjs.com/">gruntjs</a><br>
+<a href="https://github.com/isaacs/node-jake">jake</a><br>
+<a href="http://nodeqa.com/nodejs_ref/12">make같은 빌드툴은 node.js용으로는 없을까? jake를 소개합니다.</a><br>
+<a href="http://nodeqa.com/nodejs_ref/13">jake 2편을 소개합니다.</a></p>
+<h1 id="toc_223">process manager</h1>
+<p><a href="https://github.com/nodejitsu/forever">forever</a><br>
+<a href="http://blog.outsider.ne.kr/590">forever한글설명</a><br>
+<a href="http://uix.kr/archives/567">forever한글간단설명</a>  </p>
+<h1 id="toc_224">network</h1>
+<p><a href="https://github.com/danwrong/restler">restler</a><br>
+<a href="https://github.com/mikeal/request">request</a><br>
+<a href="http://nodejs-kr.org/insidejs/archives/634">request 설명</a></p>
+<h1 id="toc_225">control-flow library</h1>
+<p><a href="https://github.com/caolan/async">async</a><br>
+<a href="https://github.com/creationix/step">step</a>  </p>
+<h1 id="toc_226">dom controll</h1>
+<p><a href="http://phantomjs.org/">phantomjs</a><br>
+<a href="https://github.com/tmpvar/jsdom">jsdom</a>  </p>
+<h1 id="toc_227">job scheduler</h1>
+<p><a href="https://github.com/mattpat/node-schedule">node-schedule</a></p>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+
+
+    <footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+    </script>
+    
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42117016-1']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[niceilm's devnote]]></title><description><![CDATA[to be full stack programmer]]></description><link>http://page.niceilm.net</link><image><url>http://page.niceilm.net/public/img/favorite.png</url><title>niceilm&apos;s devnote</title><link>http://page.niceilm.net</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 11 Sep 2013 09:47:14 GMT</lastBuildDate><atom:link href="http://page.niceilm.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[XCTestAssertions]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_67">XCTestAssertions.h</h1>
+<pre><code class="">//
+// Copyright (c) <span class="number">2013</span> Apple Inc. All rights reserved.
+//
+// Copyright (c) <span class="number">1997</span>-<span class="number">2005</span>, Sen:te (Sente SA).  All rights reserved.
+//
+// Use <span class="keyword">of</span> this source code <span class="keyword">is</span> governed <span class="keyword">by</span> <span class="keyword">the</span> following license:
+// 
+// Redistribution <span class="keyword">and</span> use <span class="keyword">in</span> source <span class="keyword">and</span> binary forms, <span class="keyword">with</span> <span class="keyword">or</span> <span class="keyword">without</span> modification, 
+// are permitted provided <span class="keyword">that</span> <span class="keyword">the</span> following conditions are met:
+// 
+// (<span class="number">1</span>) Redistributions <span class="keyword">of</span> source code must retain <span class="keyword">the</span> <span class="keyword">above</span> copyright notice, 
+// this <span class="type">list</span> <span class="keyword">of</span> conditions <span class="keyword">and</span> <span class="keyword">the</span> following disclaimer.
+// 
+// (<span class="number">2</span>) Redistributions <span class="keyword">in</span> binary form must reproduce <span class="keyword">the</span> <span class="keyword">above</span> copyright notice, 
+// this <span class="type">list</span> <span class="keyword">of</span> conditions <span class="keyword">and</span> <span class="keyword">the</span> following disclaimer <span class="keyword">in</span> <span class="keyword">the</span> documentation 
+// <span class="keyword">and</span>/<span class="keyword">or</span> other materials provided <span class="keyword">with</span> <span class="keyword">the</span> distribution.
+// 
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' 
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+// WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+// IN NO EVENT SHALL Sente SA OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT 
+// OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
+// HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+// OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+// EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// 
+// Note: this license <span class="keyword">is</span> equivalent <span class="keyword">to</span> <span class="keyword">the</span> FreeBSD license.
+// 
+// This notice may <span class="keyword">not</span> be removed <span class="keyword">from</span> this <span class="type">file</span>.
+
+<span class="comment">#import &lt;XCTest/XCTestAssertionsImpl.h&gt;</span>
+
+/// \def XCTFail(format...)
+/// \brief Generates a failure unconditionally.
+/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
+/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
+<span class="comment">#define XCTFail(format...) \</span>
+    _XCTPrimitiveFail(format)
+
+/// \def XCTAssertNil(a1, format...)
+/// \brief Generates a failure when \a1 <span class="keyword">is</span> <span class="keyword">not</span> nil.
+/// \param a1 The object <span class="keyword">that</span> <span class="keyword">is</span> tested.
+/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
+/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
+<span class="comment">#define XCTAssertNil(a1, format...) \</span>
+    _XCTPrimitiveAssertNil(a1, <span class="comment">## format)</span>
+
+/// \def XCTAssertNotNil(a1, format...)
+/// \brief Generates a failure when a1 <span class="keyword">is</span> nil.
+/// \param a1 The object <span class="keyword">that</span> <span class="keyword">is</span> tested.
+/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
+/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
+<span class="comment">#define XCTAssertNotNil(a1, format...) \</span>
+    _XCTPrimitiveAssertNotNil(a1, <span class="comment">## format)</span>
+</code></pre>]]></description><link>http://page.niceilm.net/post/xctestassertions</link><guid isPermaLink="false">xctestassertions</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[osx 영한/한영사전 사용하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_63">osx 영한/한영사전 사용하기</h1>
+
+<h2 id="toc_64">DictUnifier</h2>
+<p><a href="http://code.google.com/p/mac-dictionary-kit/">http://code.google.com/p/mac-dictionary-kit/</a></p><p>사전 소스를 osx  사전으로 변환해주는 툴입니다. 오픈소스입니다.</p>
+<h2 id="toc_65">한글 오픈 사전 소스</h2>
+<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>]]></description><link>http://page.niceilm.net/post/osx-dic</link><guid isPermaLink="false">osx-dic</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[iTerm2 시작할 때 서버 접속 방법]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_57">iTerm2 시작할 때 서버 접속 방법</h1>
+<p>iterm2 는 osx 용 터미널 프로그램이다. 기본 터미널 프로그램보다 더 다양한 기능을 제공하고 있고 게다가 무료이다.</p><p><a href="http://www.iterm2.com/">http://www.iterm2.com/</a></p><p>iterm2의 좋은 기능중 하나인 여러 서버에 동시에 접속하는 방법에 대해서 알아본다.</p>
+<ol>
+<li>우선 접속한 서버별로 Profiles을 추가한다.<br>
+<img src="/post/iterm2-connect-server/@img/001.png" alt=""></li>
+<li>Command 를 사용하여 바로 접속을 유도한다.<br>
+접속시에는 SSH 키를 이용해서 암호 없이 접속되도록 하면 편하다.<br>
+<img src="/post/iterm2-connect-server/@img/002.png" alt=""></li>
+<li>터미널을 띄워서 워하는 순서대로 배치를 해둔다.<br>
+<img src="/post/iterm2-connect-server/@img/003.png" alt=""></li>
+<li>상단메뉴에서 Window를 선택하고 현재 Window의 배치를 저장한다.<br>
+<img src="/post/iterm2-connect-server/@img/004.png" alt=""></li>
+<li>다시 설정으로 돌아가 Open default window arragement 를 활성화 시킨다.<br>
+<img src="/post/iterm2-connect-server/@img/005.png" alt=""></li>
+<li>이제부터 iterm2를 실행시키면 저장해둔 배치대로 잘 뜬다.</li>
+</ol>
+]]></description><link>http://page.niceilm.net/post/iterm2-connect-server</link><guid isPermaLink="false">iterm2-connect-server</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[iOS 웹사이트에서 앱 배포하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><p>힘들었다…<br>
+<strong>기기 등록 후 앱을 재배포 해야 한다 ㅠㅜ</strong> </p>
+<h1 id="toc_54">개발자 등록</h1>
+<p>개인 개발자 등록은 프로파일을 원격에서 설치 할 수 없음 한번은 XCode Organizer를 이용해서 기기 등록하고 프로파일을 설치 해야 함
+기업 개발자로 등록을 하면 프로파일을 원격으로 배포해서 설치 할 수 있음</p>
+<h1 id="toc_55">Archive</h1>
+<p>archive를 하게되면 앱이름.ipa와 앱이름.plist 두개의 파일을 생성  </p><p>XCode에서 시뮬레이터를 선택하지 말고 개발 아이폰을 선택한 다음  </p><p><img src="/post/ios-weongyeogji-baepohagi/@img/001.png" alt="Product &gt; Archive 를 선택"><br>
+<strong>Product &gt; Archive 를 선택</strong>  </p>]]></description><link>http://page.niceilm.net/post/ios-weongyeogji-baepohagi</link><guid isPermaLink="false">ios-weongyeogji-baepohagi</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[하루프레스 오픈]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_50">하루프레스 오픈</h1>
+<p>마크다운으로 블로그 포스팅을 할 수 있게 되었다.<br>
+알찬 내용으로 채워야 겠다.</p>]]></description><link>http://page.niceilm.net/post/harupeureseu-opeun</link><guid isPermaLink="false">harupeureseu-opeun</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
