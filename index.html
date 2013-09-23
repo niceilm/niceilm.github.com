@@ -70,6 +70,10 @@
                     </li>
                     
                     <li>
+                        <a href="/angularjs/">angularjs</a>
+                    </li>
+                    
+                    <li>
                         <a href="/frontend/">frontend</a>
                     </li>
                     
@@ -119,75 +123,21 @@
                         <div class="page-header">
                             <h1>
                                 <img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&amp;s=128.jpg&amp;d=identicon" width="50" class="thumb" />
-                                <a href="/post/xctestassertions">XCTestAssertions</a>
+                                <a href="/post/harupeureseu-opeun">하루프레스 오픈</a>
                             </h1>
                             <p class="meta">
-                                <span class="time">2013년 8월 26일 월요일 오후 2시 48분</span>
+                                <span class="time">2013년 6월 30일 일요일 오전 3시 59분</span>
                                 in Javascript <!-- 임시 카테고리 -->
                             </p>
                         </div>
                         <div class="markdown-wrapper">
-                            <h1 id="toc_67">XCTestAssertions.h</h1>
-<pre><code class="">//
-// Copyright (c) <span class="number">2013</span> Apple Inc. All rights reserved.
-//
-// Copyright (c) <span class="number">1997</span>-<span class="number">2005</span>, Sen:te (Sente SA).  All rights reserved.
-//
-// Use <span class="keyword">of</span> this source code <span class="keyword">is</span> governed <span class="keyword">by</span> <span class="keyword">the</span> following license:
-// 
-// Redistribution <span class="keyword">and</span> use <span class="keyword">in</span> source <span class="keyword">and</span> binary forms, <span class="keyword">with</span> <span class="keyword">or</span> <span class="keyword">without</span> modification, 
-// are permitted provided <span class="keyword">that</span> <span class="keyword">the</span> following conditions are met:
-// 
-// (<span class="number">1</span>) Redistributions <span class="keyword">of</span> source code must retain <span class="keyword">the</span> <span class="keyword">above</span> copyright notice, 
-// this <span class="type">list</span> <span class="keyword">of</span> conditions <span class="keyword">and</span> <span class="keyword">the</span> following disclaimer.
-// 
-// (<span class="number">2</span>) Redistributions <span class="keyword">in</span> binary form must reproduce <span class="keyword">the</span> <span class="keyword">above</span> copyright notice, 
-// this <span class="type">list</span> <span class="keyword">of</span> conditions <span class="keyword">and</span> <span class="keyword">the</span> following disclaimer <span class="keyword">in</span> <span class="keyword">the</span> documentation 
-// <span class="keyword">and</span>/<span class="keyword">or</span> other materials provided <span class="keyword">with</span> <span class="keyword">the</span> distribution.
-// 
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' 
-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
-// WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
-// IN NO EVENT SHALL Sente SA OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT 
-// OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
-// HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
-// OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
-// EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-// 
-// Note: this license <span class="keyword">is</span> equivalent <span class="keyword">to</span> <span class="keyword">the</span> FreeBSD license.
-// 
-// This notice may <span class="keyword">not</span> be removed <span class="keyword">from</span> this <span class="type">file</span>.
-
-<span class="comment">#import &lt;XCTest/XCTestAssertionsImpl.h&gt;</span>
-
-/// \def XCTFail(format...)
-/// \brief Generates a failure unconditionally.
-/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
-/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
-<span class="comment">#define XCTFail(format...) \</span>
-    _XCTPrimitiveFail(format)
-
-/// \def XCTAssertNil(a1, format...)
-/// \brief Generates a failure when \a1 <span class="keyword">is</span> <span class="keyword">not</span> nil.
-/// \param a1 The object <span class="keyword">that</span> <span class="keyword">is</span> tested.
-/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
-/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
-<span class="comment">#define XCTAssertNil(a1, format...) \</span>
-    _XCTPrimitiveAssertNil(a1, <span class="comment">## format)</span>
-
-/// \def XCTAssertNotNil(a1, format...)
-/// \brief Generates a failure when a1 <span class="keyword">is</span> nil.
-/// \param a1 The object <span class="keyword">that</span> <span class="keyword">is</span> tested.
-/// \param format An NSString object <span class="keyword">that</span> <span class="keyword">contains</span> a printf-style <span class="type">string</span> containing an <span class="keyword">error</span> message describing <span class="keyword">the</span> failure condition <span class="keyword">and</span> placeholders <span class="keyword">for</span> <span class="keyword">the</span> arguments.
-/// \param ... The arguments displayed <span class="keyword">in</span> <span class="keyword">the</span> format <span class="type">string</span>.
-<span class="comment">#define XCTAssertNotNil(a1, format...) \</span>
-    _XCTPrimitiveAssertNotNil(a1, <span class="comment">## format)</span>
-</code></pre>
+                            <h1 id="toc_80">하루프레스 오픈</h1>
+<p>마크다운으로 블로그 포스팅을 할 수 있게 되었다.<br>
+알찬 내용으로 채워야 겠다.</p>
                         </div>
                         <div class="meta clearfix">
-                            <a class="cmt" href="/post/xctestassertions/#disqus_thread" data-disqus-identifier="xctestassertions"></a>
-                            <a class="more" href="/post/xctestassertions">Read more</a>
+                            <a class="cmt" href="/post/harupeureseu-opeun/#disqus_thread" data-disqus-identifier="harupeureseu-opeun"></a>
+                            <a class="more" href="/post/harupeureseu-opeun">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -207,16 +157,81 @@
                             </p>
                         </div>
                         <div class="markdown-wrapper">
-                            <h1 id="toc_63">osx 영한/한영사전 사용하기</h1>
+                            <h1 id="toc_101">osx 영한/한영사전 사용하기</h1>
 
-<h2 id="toc_64">DictUnifier</h2>
+<h2 id="toc_102">DictUnifier</h2>
 <p><a href="http://code.google.com/p/mac-dictionary-kit/">http://code.google.com/p/mac-dictionary-kit/</a></p><p>사전 소스를 osx  사전으로 변환해주는 툴입니다. 오픈소스입니다.</p>
-<h2 id="toc_65">한글 오픈 사전 소스</h2>
+<h2 id="toc_103">한글 오픈 사전 소스</h2>
 <p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>
                         </div>
                         <div class="meta clearfix">
                             <a class="cmt" href="/post/osx-dic/#disqus_thread" data-disqus-identifier="osx-dic"></a>
                             <a class="more" href="/post/osx-dic">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        <div class="page-header">
+                            <h1>
+                                <img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&amp;s=128.jpg&amp;d=identicon" width="50" class="thumb" />
+                                <a href="/post/npm-dependency-patch">package.json의 dependency 모듈 패치</a>
+                            </h1>
+                            <p class="meta">
+                                <span class="time">2013년 9월 11일 수요일 오후 2시 48분</span>
+                                in Javascript <!-- 임시 카테고리 -->
+                            </p>
+                        </div>
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_94">package.json의 dependency 모듈 패치</h1>
+<p>passport-ldap을 이용해서 ldap을 연동했는데 한 가지 이슈가 발생했다.<br>
+passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이 아니라서 발생한 이슈가 있었다.  </p><p>이를 해결하기 위해서 passport-ldap의 package.json의 ldapjs 버전을 수정해주면 손쉽게 해결이 된다.<br>
+문제는 이 모듈을 일단 배포를 해야 하는데…<br>
+이 부분을 고민을 하다가 github로 fork를 한 다음에 이 fork한 내용을 바라보게 package.json을 수정해서 해결했다.</p><pre><code class=""><span class="keyword">...</span>
+    <span class="string">"passport-ldap"</span>: <span class="string">"git://github.com/niceilm/passport-ldap.git#650a58cfa80296092b23adf57866683229dcdf31"</span>,
+<span class="keyword">...</span>
+</code></pre>
+<h1 id="toc_95">관련링크</h1>
+<p><a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a></p>
+                        </div>
+                        <div class="meta clearfix">
+                            <a class="cmt" href="/post/npm-dependency-patch/#disqus_thread" data-disqus-identifier="npm-dependency-patch"></a>
+                            <a class="more" href="/post/npm-dependency-patch">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        <div class="page-header">
+                            <h1>
+                                <img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&amp;s=128.jpg&amp;d=identicon" width="50" class="thumb" />
+                                <a href="/post/make-git-server">git server 만들기</a>
+                            </h1>
+                            <p class="meta">
+                                <span class="time">2013년 9월 23일 월요일 오후 2시 48분</span>
+                                in Javascript <!-- 임시 카테고리 -->
+                            </p>
+                        </div>
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_90">target folder</h1>
+<p><strong>git_test_project</strong> <code>git init</code> 을 한 경우</p>
+<h1 id="toc_91">command</h1>
+<pre><code class=""><span class="title">git</span> clone <span class="comment">--bare git_test_project</span>
+<span class="title">scp</span> -r ./git_test_project.git niceilm@niceilm.net:/git/git_test_project.git
+<span class="title">git</span> remote add origin niceilm@niceilm.net:/git/git_test_project.git
+<span class="title">git</span> pull
+<span class="title">git</span> branch <span class="comment">--set-upstream-to=origin/master</span>
+</code></pre>
+                        </div>
+                        <div class="meta clearfix">
+                            <a class="cmt" href="/post/make-git-server/#disqus_thread" data-disqus-identifier="make-git-server"></a>
+                            <a class="more" href="/post/make-git-server">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +251,7 @@
                             </p>
                         </div>
                         <div class="markdown-wrapper">
-                            <h1 id="toc_57">iTerm2 시작할 때 서버 접속 방법</h1>
+                            <h1 id="toc_87">iTerm2 시작할 때 서버 접속 방법</h1>
 <p>iterm2 는 osx 용 터미널 프로그램이다. 기본 터미널 프로그램보다 더 다양한 기능을 제공하고 있고 게다가 무료이다.</p><p><a href="http://www.iterm2.com/">http://www.iterm2.com/</a></p><p>iterm2의 좋은 기능중 하나인 여러 서버에 동시에 접속하는 방법에 대해서 알아본다.</p>
 <ol>
 <li>우선 접속한 서버별로 Profiles을 추가한다.<br>
@@ -262,63 +277,6 @@
                 </div>
             </div>
             
-            <div class="row">
-                <div class="span9">
-                    <div class="well">
-                        <div class="page-header">
-                            <h1>
-                                <img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&amp;s=128.jpg&amp;d=identicon" width="50" class="thumb" />
-                                <a href="/post/ios-weongyeogji-baepohagi">iOS 웹사이트에서 앱 배포하기</a>
-                            </h1>
-                            <p class="meta">
-                                <span class="time">2013년 7월 2일 화요일 오후 8시 57분</span>
-                                in Javascript <!-- 임시 카테고리 -->
-                            </p>
-                        </div>
-                        <div class="markdown-wrapper">
-                            <p>힘들었다…<br>
-<strong>기기 등록 후 앱을 재배포 해야 한다 ㅠㅜ</strong> </p>
-<h1 id="toc_54">개발자 등록</h1>
-<p>개인 개발자 등록은 프로파일을 원격에서 설치 할 수 없음 한번은 XCode Organizer를 이용해서 기기 등록하고 프로파일을 설치 해야 함
-기업 개발자로 등록을 하면 프로파일을 원격으로 배포해서 설치 할 수 있음</p>
-<h1 id="toc_55">Archive</h1>
-<p>archive를 하게되면 앱이름.ipa와 앱이름.plist 두개의 파일을 생성  </p><p>XCode에서 시뮬레이터를 선택하지 말고 개발 아이폰을 선택한 다음  </p><p><img src="/post/ios-weongyeogji-baepohagi/@img/001.png" alt="Product &gt; Archive 를 선택"><br>
-<strong>Product &gt; Archive 를 선택</strong>  </p>
-                        </div>
-                        <div class="meta clearfix">
-                            <a class="cmt" href="/post/ios-weongyeogji-baepohagi/#disqus_thread" data-disqus-identifier="ios-weongyeogji-baepohagi"></a>
-                            <a class="more" href="/post/ios-weongyeogji-baepohagi">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="span9">
-                    <div class="well">
-                        <div class="page-header">
-                            <h1>
-                                <img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&amp;s=128.jpg&amp;d=identicon" width="50" class="thumb" />
-                                <a href="/post/harupeureseu-opeun">하루프레스 오픈</a>
-                            </h1>
-                            <p class="meta">
-                                <span class="time">2013년 6월 30일 일요일 오전 3시 59분</span>
-                                in Javascript <!-- 임시 카테고리 -->
-                            </p>
-                        </div>
-                        <div class="markdown-wrapper">
-                            <h1 id="toc_50">하루프레스 오픈</h1>
-<p>마크다운으로 블로그 포스팅을 할 수 있게 되었다.<br>
-알찬 내용으로 채워야 겠다.</p>
-                        </div>
-                        <div class="meta clearfix">
-                            <a class="cmt" href="/post/harupeureseu-opeun/#disqus_thread" data-disqus-identifier="harupeureseu-opeun"></a>
-                            <a class="more" href="/post/harupeureseu-opeun">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
         <div class="span3 side">
             <div id="author" class="well">
@@ -338,7 +296,11 @@
                     
                     <li><a href="/category/tip">tip</a></li>
                     
+                    <li><a href="/category/nodejs">nodejs</a></li>
+                    
                     <li><a href="/category/life">life</a></li>
+                    
+                    <li><a href="/category/git">git</a></li>
                     
                     <li><a href="/category/osx">osx</a></li>
                     

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>iTerm2 시작할 때 서버 접속 방법 |  niceilm's devnote</title>
+    <title>package.json의 dependency 모듈 패치 |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -120,20 +120,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 7월 6일 토요일 오후 9시 00분</span>
+                                <span class="time">2013년 9월 11일 수요일 오후 2시 48분</span>
                             </p>
-                            <h1>iTerm2 시작할 때 서버 접속 방법</h1>
+                            <h1>package.json의 dependency 모듈 패치</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="iTerm2 시작할 때 서버 접속 방법 -" data-url="http://page.niceilm.net/post/iterm2-connect-server" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="package.json의 dependency 모듈 패치 -" data-url="http://page.niceilm.net/post/npm-dependency-patch" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/iterm2-connect-server"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/npm-dependency-patch"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -146,35 +146,28 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_86">iTerm2 시작할 때 서버 접속 방법</h1>
-<p>iterm2 는 osx 용 터미널 프로그램이다. 기본 터미널 프로그램보다 더 다양한 기능을 제공하고 있고 게다가 무료이다.</p><p><a href="http://www.iterm2.com/">http://www.iterm2.com/</a></p><p>iterm2의 좋은 기능중 하나인 여러 서버에 동시에 접속하는 방법에 대해서 알아본다.</p>
-<ol>
-<li>우선 접속한 서버별로 Profiles을 추가한다.<br>
-<img src="./@img/001.png" alt=""></li>
-<li>Command 를 사용하여 바로 접속을 유도한다.<br>
-접속시에는 SSH 키를 이용해서 암호 없이 접속되도록 하면 편하다.<br>
-<img src="./@img/002.png" alt=""></li>
-<li>터미널을 띄워서 워하는 순서대로 배치를 해둔다.<br>
-<img src="./@img/003.png" alt=""></li>
-<li>상단메뉴에서 Window를 선택하고 현재 Window의 배치를 저장한다.<br>
-<img src="./@img/004.png" alt=""></li>
-<li>다시 설정으로 돌아가 Open default window arragement 를 활성화 시킨다.<br>
-<img src="./@img/005.png" alt=""></li>
-<li>이제부터 iterm2를 실행시키면 저장해둔 배치대로 잘 뜬다.</li>
-</ol>
-
+                            <h1 id="toc_92">package.json의 dependency 모듈 패치</h1>
+<p>passport-ldap을 이용해서 ldap을 연동했는데 한 가지 이슈가 발생했다.<br>
+passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이 아니라서 발생한 이슈가 있었다.  </p><p>이를 해결하기 위해서 passport-ldap의 package.json의 ldapjs 버전을 수정해주면 손쉽게 해결이 된다.<br>
+문제는 이 모듈을 일단 배포를 해야 하는데…<br>
+이 부분을 고민을 하다가 github로 fork를 한 다음에 이 fork한 내용을 바라보게 package.json을 수정해서 해결했다.</p><pre><code class=""><span class="keyword">...</span>
+    <span class="string">"passport-ldap"</span>: <span class="string">"git://github.com/niceilm/passport-ldap.git#650a58cfa80296092b23adf57866683229dcdf31"</span>,
+<span class="keyword">...</span>
+</code></pre>
+<h1 id="toc_93">관련링크</h1>
+<p><a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a></p>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/make-git-server" class="button next">git server 만들기<i class="icon"></i></a>
+                                <a href="/post/osx-dic" class="button next">osx 영한/한영사전 사용하기<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/ios-weongyeogji-baepohagi" class="button prev"><i class="icon"></i> iOS 웹사이트에서 앱 배포하기</a>
+                                <a href="/post/make-git-server" class="button prev"><i class="icon"></i> git server 만들기</a>
                             </div>
                             
                         </div>
@@ -325,7 +318,9 @@
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/tip,iterm2">tip,iterm2</a>&nbsp;-->
+            <!--<a href="/tag/nodejs">nodejs</a>&nbsp;-->
+            <!---->
+            <!--<a href="/tag/npm">npm</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
