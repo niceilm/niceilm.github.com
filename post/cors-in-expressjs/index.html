@@ -179,39 +179,40 @@ app.<span class="keyword">get</span>('/products/:<span class="property">id</span
 
 app.listen(<span class="number">80</span>, function(){
   console.<span class="command">log</span>('CORS-enabled web server listening <span class="function_start"><span class="keyword">on</span> <span class="title">port</span></span> <span class="number">80</span>');
-});```
-
-<span class="comment"># How to authenticate?</span>
-CORS를 이용해서 인증을 사용하려면 추가적인 내용이 필요하다.
-
-<span class="comment">## ServerSide</span>
-</code></pre><p>app.use(cors({
-    &#39;origin&#39; : &#39;http://localhost:10080&#39;,
-    &#39;credentials&#39; : true
-}));</p><pre><code class="">특히 인증을 사용할때에는 꼬옥 orgin을 명시해줘야 한다. <span class="code">`*`</span>는 동작하지 않는다.
-<span class="header">## ClientSide</span>
-</code></pre><p>// angularjs $http
-$http.post(&#39;http://cors-target-domain/auth/login&#39;, {
-    user : $scope.user,
-    pwd : $scope.pwd
-}, {withCredentials : true}).success(function(data, status, headers, config) {
-        if(data.success) {
-            $rootScope.isLogin = true;
-            $rootScope.user = data.user;
-            $location.path(&#39;/&#39;).replace();
-        } else {
-            $window.alert(&quot;아이디와 패스워드가 잘못되었습니다. 다시 재로그인 부탁합니다.&quot;);
+});
+</code></pre>
+<h1 id="toc_50">How to authenticate?</h1>
+<p>CORS를 이용해서 인증을 사용하려면 추가적인 내용이 필요하다.</p>
+<h2 id="toc_51">ServerSide</h2>
+<pre><code class="">app.<span class="keyword">use</span>(cors({
+    <span class="string">'origin'</span> : <span class="string">'http://localhost:10080'</span>,
+    <span class="string">'credentials'</span> : <span class="keyword">true</span>
+}));
+</code></pre><p>특히 인증을 사용할때에는 꼬옥 orgin을 명시해줘야 한다. &#39;*&#39;는 동작하지 않는다.</p>
+<h2 id="toc_52">ClientSide</h2>
+<pre><code class=""><span class="comment">// angularjs $http</span>
+<span class="variable">$http</span>.post(<span class="string">'http://cors-target-domain/auth/login'</span>, {
+    user : <span class="variable">$scope</span>.user,
+    pwd : <span class="variable">$scope</span>.pwd
+}, {withCredentials : <span class="keyword">true</span>}).success(function(data, status, headers, config) {
+        <span class="keyword">if</span>(data.success) {
+            <span class="variable">$rootScope</span>.isLogin = <span class="keyword">true</span>;
+            <span class="variable">$rootScope</span>.user = data.user;
+            <span class="variable">$location</span>.path(<span class="string">'/'</span>).replace();
+        } <span class="keyword">else</span> {
+            <span class="variable">$window</span>.alert(<span class="string">"아이디와 패스워드가 잘못되었습니다. 다시 재로그인 부탁합니다."</span>);
         }
     });
-// angularjs resource
-$resource(&#39;http://cors-target-domain/api/feed/:feedId&#39;, {feedId : &#39;@id&#39;}, {
-    query : {method : &#39;GET&#39;, withCredentials : true, isArray : true},
-    get : {method : &#39;GET&#39;, withCredentials : true},
-    save : {method : &#39;POST&#39;, withCredentials : true},
-    remove : {method : &#39;DELETE&#39;, withCredentials : true},
-    update : {method : &#39;PUT&#39;, withCredentials : true}
-});</p><pre><code class="">요청을 보낼때는 꼭 `<span class="javascript"></span>``<span class="javascript">withCredentials : <span class="literal">true</span></span>``<span class="javascript"></span>`로 활성화 해야 한다.
-</code></pre>
+
+<span class="comment">// angularjs resource</span>
+<span class="variable">$resource</span>(<span class="string">'http://cors-target-domain/api/feed/:feedId'</span>, {feedId : <span class="string">'@id'</span>}, {
+    query : {method : <span class="string">'GET'</span>, withCredentials : <span class="keyword">true</span>, isArray : <span class="keyword">true</span>},
+    get : {method : <span class="string">'GET'</span>, withCredentials : <span class="keyword">true</span>},
+    save : {method : <span class="string">'POST'</span>, withCredentials : <span class="keyword">true</span>},
+    remove : {method : <span class="string">'DELETE'</span>, withCredentials : <span class="keyword">true</span>},
+    update : {method : <span class="string">'PUT'</span>, withCredentials : <span class="keyword">true</span>}
+});
+</code></pre><p>요청을 보낼때는 꼭 <code>withCredentials : true</code>로 활성화 해야 한다.</p>
                         </div>
                                             
                         <div class="meta clearfix">
