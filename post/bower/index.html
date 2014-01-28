@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>fullstack in nodejs |  niceilm's devnote</title>
+    <title>bower |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 9월 11일 수요일 오후 6시 50분</span>
+                                <span class="time">2013년 10월 5일 토요일 오후 7시 00분</span>
                             </p>
-                            <h1>fullstack in nodejs</h1>
+                            <h1>bower</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="fullstack in nodejs -" data-url="http://page.niceilm.net/post/fullstack-in-nodejs" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="bower -" data-url="http://page.niceilm.net/post/bower" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/fullstack-in-nodejs"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/bower"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,201 +150,18 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_62">backend</h1>
-
-<h2 id="toc_63"><a href="http://www.ubuntu.com/">ubuntu</a></h2>
-
+                            <h1 id="toc_41">Bower</h1>
+<p>A package manager for the web</p>
 <ul>
-<li>debian 계열의 linux server</li>
-<li>apt-get 명령어를 이용해서 필요한 서버 프로그램을 손쉽게 설치할 수 있고 실제 모두 설치해도 용량도 1.5GB로 작게 차지 한다.</li>
-<li>무난히 손쉽게 사용할 수 있어서 선택했다.</li>
-<li>other <strong>linux server</strong>
-
-<ul>
-<li><a href="http://www.centos.org/">centos</a></li>
-</ul></li>
+<li><a href="http://bower.io/">http://bower.io/</a></li>
+<li><a href="https://github.com/bower/bower">https://github.com/bower/bower</a></li>
 </ul>
 
-<h2 id="toc_64"><a href="http://wiki.nginx.org/Main">nginx</a></h2>
+<h1 id="toc_42">Article</h1>
 
 <ul>
-<li>기본 웹서버, proxy pass를 이용해서 other 서버와 연결</li>
-<li><a href="http://www.kegel.com/c10k.html">C10K problem</a> 해결을 위해 만든 서버로 성능상 이점이 큼</li>
-<li>other <strong>web server</strong>
-
-<ul>
-<li><a href="http://httpd.apache.org/">apache</a></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_65"><a href="http://www.mongodb.org/">mongodb</a></h2>
-
-<ul>
-<li>javascript syntax 로 손쉽게 사용할 수 있는 nosql db이다.</li>
-<li>other <strong>database</strong>
-
-<ul>
-<li><a href="http://www.mysql.com/">mysql</a></li>
-<li><a href="https://mariadb.org/">mariadb</a></li>
-<li><a href="http://cassandra.apache.org/">cassandra</a></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_66"><a href="http://redis.io/">redis</a></h2>
-
-<ul>
-<li>Redis is an open source, BSD licensed, advanced key-value store</li>
-<li>other <strong>cache</strong>
-
-<ul>
-<li>memcache</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_67"><a href="http://page.niceilm.net/git/">git</a> - scm</h2>
-
-<ul>
-<li>속도가 빠른 scm</li>
-<li>other <strong>scm</strong>
-
-<ul>
-<li><a href="http://subversion.apache.org/">svn</a></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_68"><a href="http://page.niceilm.net/nodejs/">nodejs</a> - web application server</h2>
-
-<ul>
-<li>V8 javascript 엔진 기반의 플랫폼 web application server 로 사용 할 수 있다.</li>
-<li>other <strong>web application server</strong>
-
-<ul>
-<li>tomcat</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_69"><a href="http://expressjs.com/">expressjs</a> - web application framework</h2>
-
-<ul>
-<li>web application framework for node</li>
-<li>other <strong>web application framework</strong>
-
-<ul>
-<li>spring mvc</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_70"><a href="https://github.com/1602/jugglingdb">jugglingdb</a> - orm framework</h2>
-
-<ul>
-<li>Multi-database ORM: redis, mongodb, mysql, sqlite, postgres, neo4j, memory... Many databases, common API.</li>
-<li><a href="http://jugglingdb.co">http://jugglingdb.co</a></li>
-<li>other <strong>orm framework</strong>
-
-<ul>
-<li><a href="http://www.hibernate.org/">hibernate</a></li>
-<li><a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/">spring data jpa</a></li>
-</ul></li>
-</ul>
-
-<h2 id="toc_71"><a href="http://passportjs.org/">passportjs</a> - authentication framework</h2>
-
-<ul>
-<li>Simple, unobtrusive authentication for Node.js.</li>
-<li>other <strong>authentication framework</strong>
-
-<ul>
-<li><a href="http://docs.spring.io/spring-security/site/index.html">spring security</a>;</li>
-</ul></li>
-</ul>
-
-<h1 id="toc_72">frontend</h1>
-
-<h2 id="toc_73"><a href="http://html5boilerplate.com/">html5boilerplate</a></h2>
-
-<ul>
-<li>The web’s most popular front-end template</li>
-</ul>
-
-<h2 id="toc_74"><a href="http://getbootstrap.com/">bootstrap</a></h2>
-
-<ul>
-<li>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</li>
-</ul>
-
-<h2 id="toc_75"><a href="http://requirejs.org/">requirejs</a></h2>
-
-<ul>
-<li>RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.</li>
-</ul>
-
-<h2 id="toc_76"><a href="http://jquery.com/">jquery</a></h2>
-
-<ul>
-<li>jQuery is a fast, small, and feature-rich JavaScript library</li>
-</ul>
-
-<h2 id="toc_77"><a href="http://angularjs.org/">angularjs</a></h2>
-
-<ul>
-<li>HTML enhanced for web apps</li>
-<li>other <strong>SPA Framework</strong>
-
-<ul>
-<li>backbone.js</li>
-</ul></li>
-</ul>
-
-<h2 id="toc_78"><a href="http://lesscss.org/">less</a></h2>
-
-<ul>
-<li>The dynamic stylesheet language. </li>
-<li>LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.</li>
-<li>other css preprocessor
-
-<ul>
-<li>sass</li>
-</ul></li>
-</ul>
-
-<h1 id="toc_79">Tool</h1>
-
-<h2 id="toc_80"><a href="https://npmjs.org/">npm</a></h2>
-
-<ul>
-<li>Node Packaged Modules</li>
-</ul>
-
-<h2 id="toc_81"><a href="http://yeoman.io/">yeoman</a></h2>
-
-<ul>
-<li>MODERN WORKFLOWS FOR MODERN WEBAPPS</li>
-</ul>
-
-<h2 id="toc_82"><a href="http://gruntjs.com/">gruntjs</a></h2>
-
-<ul>
-<li>The JavaScript Task Runner</li>
-</ul>
-
-<h2 id="toc_83"><a href="http://bower.io/">bower</a></h2>
-
-<ul>
-<li>A package manager for the web</li>
-</ul>
-
-<h2 id="toc_84"><a href="http://pivotal.github.io/jasmine/">jasmine</a></h2>
-
-<ul>
-<li>Jasmine is a behavior-driven development framework for testing JavaScript code</li>
-</ul>
-
-<h2 id="toc_85"><a href="http://karma-runner.github.io/">karma</a></h2>
-
-<ul>
-<li>On the AngularJS team, we rely on testing and we always seek better tools to make our life easier. That&#39;s why we created
-Karma - a test runner that fits all our needs.</li>
-<li>Spectacular Test Runner for JavaScript</li>
+<li><a href="http://blog.geekple.com/2012/09/10/bower-open-sourced-by-twitter/">bower 소개글</a></li>
+<li><a href="http://blog.outsider.ne.kr/933">bower : 웹 프론트앤드 패키지 관리자</a></li>
 </ul>
 
                         </div>
@@ -352,13 +169,13 @@ Karma - a test runner that fits all our needs.</li>
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/hadoop" class="button next">hadoop<i class="icon"></i></a>
+                                <a href="/post/chrome-confirm" class="button next">Chrome 전체 종료 전에 컨펌창 띄우기<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/error-xctestcase-in-xcode5" class="button prev"><i class="icon"></i> Error XCTestCase in Xcode5</a>
+                                <a href="/post/android-stack" class="button prev"><i class="icon"></i> Android Stack</a>
                             </div>
                             
                         </div>
@@ -547,7 +364,7 @@ Karma - a test runner that fits all our needs.</li>
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/nodejs">nodejs</a>&nbsp;-->
+            <!--<a href="/tag/bower">bower</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->

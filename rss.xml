@@ -1,49 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[niceilm's devnote]]></title><description><![CDATA[to be full stack programmer]]></description><link>http://page.niceilm.net</link><image><url>http://page.niceilm.net/public/img/favorite.png</url><title>niceilm&apos;s devnote</title><link>http://page.niceilm.net</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 01 Oct 2013 05:21:04 GMT</lastBuildDate><atom:link href="http://page.niceilm.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[hadoop]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_96">Hadoop의 구성</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[niceilm's devnote]]></title><description><![CDATA[to be full stack programmer]]></description><link>http://page.niceilm.net</link><image><url>http://page.niceilm.net/public/img/favorite.png</url><title>niceilm&apos;s devnote</title><link>http://page.niceilm.net</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 28 Jan 2014 02:58:03 GMT</lastBuildDate><atom:link href="http://page.niceilm.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[하루프레스 오픈]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_104">하루프레스 오픈</h1>
+<p>마크다운으로 블로그 포스팅을 할 수 있게 되었다.<br>
+알찬 내용으로 채워야 겠다.</p>]]></description><link>http://page.niceilm.net/post/harupeureseu-opeun</link><guid isPermaLink="false">harupeureseu-opeun</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[python]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_144">python</h1>
+
+<h1 id="toc_145">Articles</h1>
 
 <ul>
-<li>  분산 파일 시스템 (HDFS)
+<li><strong><em>NEW</em></strong> <a href="http://j.mp/15LFDNo" title="9/9">파이썬 10 분만에 배우기</a>
 
 <ul>
-<li>  저성능 컴퓨터의 대수를 늘리는 방법</li>
-<li>  데이터가 분산되어 있어도 빠르게 찾아내고, 고장에 둔감해야 하는 요구 사항을 해결</li>
+<li>원문 : <a href="http://www.stavros.io/tutorials/python/">Tutorial - Learn Python in 10 minutes</a></li>
 </ul></li>
-<li>  MapRedude
+<li><a href="http://songhun.blogspot.kr/2011/12/python-ecosystem-introduction.html">Python Ecosystem - An Introduction</a>
 
 <ul>
-<li>  분산 처리 시스템</li>
+<li> 원문 : <a href="http://mirnazim.org/writings/python-ecosystem-introduction/">Python Ecosystem - An Introduction</a></li>
 </ul></li>
-<li>  Hadoop ecosystem
+<li><a href="http://kswa.codingstar.net:14705/html/">Flask 0.9 documentation</a>
 
 <ul>
-<li>  HDFS와 MapReduce를 사용하기 위한 유틸리티를 총칭</li>
-<li>  Hadoop이 순차적으로 데이터를 사용하는 일괄 처리 방식이기 때문에, 여러 작업을 동시에 할 수 없음 (이해 안 됨 더 조사 필요??)</li>
-<li>  데이터 유실을 막기 위한 방법 및 파일 시스템 효율성 개선이 필요</li>
+<li>원문 : <a href="http://flask.pocoo.org/docs/">Flask documentation</a></li>
 </ul></li>
 </ul>
+]]></description><link>http://page.niceilm.net/post/python</link><guid isPermaLink="false">python</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[osx 영한/한영사전 사용하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_139">osx 영한/한영사전 사용하기</h1>
 
-<h2 id="toc_97">Hadoop&nbsp;Module</h2>
-
-<ul>
-<li>  Hadoop Common : 다른 Hadoop모듈을 지원하는 공통 유틸</li>
-<li>  Hadoop Distributed File System (HDFS) : 애플리케이션 데이터 접근에 빠른 속도를 제공하는 분산 파일 시스템</li>
-<li>  Hadoop YARN : 잡 스케쥴링 및 클러스터 리소스 관리 framework (Hadoop 2.0부터 추가)</li>
-<li>  Hadoop MapReduce : 큰 데이터의 병렬 프로세싱을 위한 YARN를 베이스로 한 시스템</li>
-</ul>
-
-<h2 id="toc_98">Hadoop의 특징</h2>
-
-<ul>
-<li>  노드가 늘어날 수록 데이터 량/처리 속도가 linear하게 증가</li>
-<li>  로그, 텍스트, 이미지 등의 비정형 데이터를 다루는 데 유리</li>
-<li>  실시간 보다는 배치(웹 크롤링, 로그 분석 등)에 적합하다.</li>
-</ul>
-]]></description><link>http://page.niceilm.net/post/hadoop</link><guid isPermaLink="false">hadoop</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[osx 영한/한영사전 사용하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_121">osx 영한/한영사전 사용하기</h1>
-
-<h2 id="toc_122">DictUnifier</h2>
+<h2 id="toc_140">DictUnifier</h2>
 <p><a href="http://code.google.com/p/mac-dictionary-kit/">http://code.google.com/p/mac-dictionary-kit/</a></p><p>사전 소스를 osx  사전으로 변환해주는 툴입니다. 오픈소스입니다.</p>
-<h2 id="toc_123">한글 오픈 사전 소스</h2>
-<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>]]></description><link>http://page.niceilm.net/post/osx-dic</link><guid isPermaLink="false">osx-dic</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[package.json의 dependency 모듈 패치]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_114">package.json의 dependency 모듈 패치</h1>
+<h2 id="toc_141">한글 오픈 사전 소스</h2>
+<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>]]></description><link>http://page.niceilm.net/post/osx-dic</link><guid isPermaLink="false">osx-dic</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[package.json의 dependency 모듈 패치]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_132">package.json의 dependency 모듈 패치</h1>
 <p>passport-ldap을 이용해서 ldap을 연동했는데 한 가지 이슈가 발생했다.<br>
 passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이 아니라서 발생한 이슈가 있었다.  </p><p>이를 해결하기 위해서 passport-ldap의 package.json의 ldapjs 버전을 수정해주면 손쉽게 해결이 된다.<br>
 문제는 이 모듈을 일단 배포를 해야 하는데…<br>
@@ -51,29 +35,13 @@ passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이
     <span class="string">"passport-ldap"</span>: <span class="string">"git://github.com/niceilm/passport-ldap.git#650a58cfa80296092b23adf57866683229dcdf31"</span>,
 <span class="keyword">...</span>
 </code></pre>
-<h1 id="toc_115">관련링크</h1>
-<p><a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a></p>]]></description><link>http://page.niceilm.net/post/npm-dependency-patch</link><guid isPermaLink="false">npm-dependency-patch</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[git server 만들기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_110">target folder</h1>
+<h1 id="toc_133">관련링크</h1>
+<p><a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a></p>]]></description><link>http://page.niceilm.net/post/npm-dependency-patch</link><guid isPermaLink="false">npm-dependency-patch</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[git server 만들기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_128">target folder</h1>
 <p><strong>git_test_project</strong> <code>git init</code> 을 한 경우</p>
-<h1 id="toc_111">command</h1>
+<h1 id="toc_129">command</h1>
 <pre><code class=""><span class="title">git</span> clone <span class="comment">--bare git_test_project</span>
 <span class="title">scp</span> -r ./git_test_project.git niceilm@niceilm.net:/git/git_test_project.git
 <span class="title">git</span> remote add origin niceilm@niceilm.net:/git/git_test_project.git
 <span class="title">git</span> pull
 <span class="title">git</span> branch <span class="comment">--set-upstream-to=origin/master</span>
-</code></pre>]]></description><link>http://page.niceilm.net/post/make-git-server</link><guid isPermaLink="false">make-git-server</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[iTerm2 시작할 때 서버 접속 방법]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_107">iTerm2 시작할 때 서버 접속 방법</h1>
-<p>iterm2 는 osx 용 터미널 프로그램이다. 기본 터미널 프로그램보다 더 다양한 기능을 제공하고 있고 게다가 무료이다.</p><p><a href="http://www.iterm2.com/">http://www.iterm2.com/</a></p><p>iterm2의 좋은 기능중 하나인 여러 서버에 동시에 접속하는 방법에 대해서 알아본다.</p>
-<ol>
-<li>우선 접속한 서버별로 Profiles을 추가한다.<br>
-<img src="/post/iterm2-connect-server/@img/001.png" alt=""></li>
-<li>Command 를 사용하여 바로 접속을 유도한다.<br>
-접속시에는 SSH 키를 이용해서 암호 없이 접속되도록 하면 편하다.<br>
-<img src="/post/iterm2-connect-server/@img/002.png" alt=""></li>
-<li>터미널을 띄워서 워하는 순서대로 배치를 해둔다.<br>
-<img src="/post/iterm2-connect-server/@img/003.png" alt=""></li>
-<li>상단메뉴에서 Window를 선택하고 현재 Window의 배치를 저장한다.<br>
-<img src="/post/iterm2-connect-server/@img/004.png" alt=""></li>
-<li>다시 설정으로 돌아가 Open default window arragement 를 활성화 시킨다.<br>
-<img src="/post/iterm2-connect-server/@img/005.png" alt=""></li>
-<li>이제부터 iterm2를 실행시키면 저장해둔 배치대로 잘 뜬다.</li>
-</ol>
-]]></description><link>http://page.niceilm.net/post/iterm2-connect-server</link><guid isPermaLink="false">iterm2-connect-server</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
+</code></pre>]]></description><link>http://page.niceilm.net/post/make-git-server</link><guid isPermaLink="false">make-git-server</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>

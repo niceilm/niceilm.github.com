@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kinds of ios |  niceilm's devnote</title>
+    <title>mongodb niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -35,12 +35,8 @@
     <!-- Le javascript -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.jsonp.js"></script>
-    <script src="/js/mustache.js"></script>
-    <script src="/js/apps/github.js"></script>
-    <script src="/js/apps/twitter.js"></script>
+    <script src="/js/apps/toc.js"></script>
 </head>
-
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
     <div class="navbar navbar-fixed-top">
@@ -114,78 +110,58 @@
     </div>
 </div>
 
-    <div class="container">
-    <div class="row">
-        <div class="span9 articles">
-            <div class="well bg">
-                <div class="page-header">
-                    <h1>Category : <small>JavaScript</small> <span class="badge badge-info">4</span></h1>
-                </div>
+    
+<link href="/css/code/default.css" rel="stylesheet">
 
-                <ul class="lists">
-                    
-                    <li>
-                        <h3>
-                            <a href="/post/add-user-defined-in-xcode5">Add User-Defined in Xcode5</a> 
-                        </h3>
-                        <small>by niceilm / 2013년 8월 27일 화요일 오전 10시 19분</small>
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://page.niceilm.net/mongodb/" data-via="niceilm" data-hashtags="mongodb">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
                     </li>
-                    
-                    <li>
-                        <h3>
-                            <a href="/post/error-xctestcase-in-xcode5">Error XCTestCase in Xcode5</a> 
-                        </h3>
-                        <small>by niceilm / 2013년 8월 27일 화요일 오후 2시 50분</small>
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="http://page.niceilm.net/mongodb/"></div>
                     </li>
-                    
-                    <li>
-                        <h3>
-                            <a href="/post/ios-weongyeogji-baepohagi">iOS 웹사이트에서 앱 배포하기</a> 
-                        </h3>
-                        <small>by niceilm / 2013년 7월 2일 화요일 오후 8시 57분</small>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
                     </li>
-                    
-                    <li>
-                        <h3>
-                            <a href="/post/xctestassertions">XCTestAssertions</a> 
-                        </h3>
-                        <small>by niceilm / 2013년 8월 26일 월요일 오후 2시 48분</small>
-                    </li>
-                    
                 </ul>
+                <h1 id="toc_294">mongoDB</h1>
+<p>MongoDB (from &quot;humongous&quot;) is an open-source document database, and the leading NoSQL database. Written in C++</p>
+<ul>
+<li><a href="http://www.mongodb.org/">http://www.mongodb.org/</a></li>
+</ul>
+
+<h1 id="toc_295">Articles</h1>
+
+<ul>
+<li><a href="http://charsyam.wordpress.com/2012/01/15/%EB%B0%9C-%EB%B2%88%EC%97%AD-mongodb-with-raid-10-on-ubuntu-11-04/">MongoDB With RAID 10 on Ubuntu 11.04</a>
+
+<ul>
+<li>원문 : <a href="http://blog.troygrosfield.com/2011/11/08/mongodb-with-raid-10-on-ubuntu-11-04/">MongoDB with RAID 10 on Ubuntu 11.04</a></li>
+</ul></li>
+<li><a href="http://charsyam.wordpress.com/2011/12/25/%EB%B0%9C-%EB%B2%88%EC%97%AD-mongodb-best-practices/">MongoDB Best Practices</a>
+
+<ul>
+<li>원문 : <a href="http://blog.engineyard.com/2011/mongodb-best-practices">MongoDB Best Practices</a></li>
+</ul></li>
+</ul>
+
             </div>
-        </div>
-        <div class="span3 side">
-            			<div class="well category">
-                <ul class="nav nav-list">
-                    <li class="nav-header title">Categories</li>
-                    <li class="active"><a href="/category">Home</a></li>
-                    
-                    <li><a href="/category/ios">ios</a></li>
-                    
-                    <li><a href="/category/android">android</a></li>
-                    
-                    <li><a href="/category/bower">bower</a></li>
-                    
-                    <li><a href="/category/tip">tip</a></li>
-                    
-                    <li><a href="/category/nodejs">nodejs</a></li>
-                    
-                    <li><a href="/category/life">life</a></li>
-                    
-                    <li><a href="/category/angularjs">angularjs</a></li>
-                    
-                    <li><a href="/category/less">less</a></li>
-                    
-                    <li><a href="/category/git">git</a></li>
-                    
-                    <li><a href="/category/osx">osx</a></li>
-                    
-                    <li><a href="/category/python">python</a></li>
-                    
-                </ul>
-            </div>
-                
         </div>
     </div>
 </div><!-- /container -->
@@ -203,6 +179,29 @@
 	</div>
 </footer>
 
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+    </script>
+    
     
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -217,6 +216,6 @@
     </script>
 
 
-
+    
 </body>
 </html>
