@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Error XCTestCase in Xcode5 |  niceilm's devnote</title>
+    <title>arc 지원하지 않는 모듈 컴파일시 |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 8월 27일 화요일 오후 2시 50분</span>
+                                <span class="time">2014년 2월 3일 월요일 오후 8시 51분</span>
                             </p>
-                            <h1>Error XCTestCase in Xcode5</h1>
+                            <h1>arc 지원하지 않는 모듈 컴파일시</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="Error XCTestCase in Xcode5 -" data-url="http://page.niceilm.net/post/error-xctestcase-in-xcode5" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="arc 지원하지 않는 모듈 컴파일시 -" data-url="http://page.niceilm.net/post/arc-jiweonhaji-anhneun-modyul-keompailsi" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/error-xctestcase-in-xcode5"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/arc-jiweonhaji-anhneun-modyul-keompailsi"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,37 +150,20 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <p>Xcode5에서 XCTest로 유닛테스트를 할 수 있다.</p>
-<h3 id="toc_60">XCTest 관련 정보</h3>
-
-<ul>
-<li><a href="http://devstreaming.apple.com/videos/wwdc/2013/409xdx4x4adcwca5ok0rtsup0sg/409/409.pdf">Testing in Xcode 5.pdf</a></li>
-<li><a href="http://devstreaming.apple.com/videos/wwdc/2013/409xdx4x4adcwca5ok0rtsup0sg/409/409-HD.mov">Testing in Xcode 5.mov</a></li>
-</ul>
-<p>위 내용을 보면 장점이 많을 것 같아서 신규 프로젝트에 적용을 해보았는데…  </p><p>아래와 같은 에러가 발생을 했다. 정말 오랜시간 삽질을 했는데ㅠㅜ  </p><pre><code class=""><span class="keyword">Library</span> <span class="keyword">not</span> loaded: /Developer/<span class="keyword">Library</span>/Frameworks/XCTest.framework/XCTest
-</code></pre><p><strong>시뮬레이터 버전을 7 이상을 선택하면 잘 동작한다.</strong></p><pre><code class="">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://naver.com"</span> <span class="attribute">class</span>=<span class="value">"_hideref"</span>&gt;</span>test<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://dl.dropboxusercontent.com/s/66y6niqh0rtapw3/jquery-migrate-1.2.1.js?token_hash=AAHlGU1YrFyWAuTnz5fds1Jz1e5WRcKQtIWsoX67vJwlQQ&amp;dl=1"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://dl.dropboxusercontent.com/s/zvm6gvhu8urb65w/jquery.hideref.js?token_hash=AAF7LW1WC3GIbp_nJFGKME_1KV14cCmkfFuetSXIB2Hyyg&amp;dl=1"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="string">"a._hideref"</span>).each(<span class="keyword">function</span>(){
-            $(<span class="keyword">this</span>).hideref();
-        });
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-
+                            <p>TARGETS &gt; Build Pahses &gt; Compile Sources</p><p>예외 소스 선택 후</p><pre><code class=""><span class="literal">-</span><span class="comment">fno</span>-<span class="comment">objc</span>-<span class="comment">arc</span>
 </code></pre>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/fullstack-in-nodejs" class="button next">fullstack in nodejs<i class="icon"></i></a>
+                                <a href="/post/bower" class="button next">bower<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/cors-in-expressjs" class="button prev"><i class="icon"></i> CORS in expressjs</a>
+                                <a href="/post/android-stack" class="button prev"><i class="icon"></i> Android Stack</a>
                             </div>
                             
                         </div>
@@ -381,9 +364,7 @@
             <!---->
             <!--<a href="/tag/ios">ios</a>&nbsp;-->
             <!---->
-            <!--<a href="/tag/xcode5">xcode5</a>&nbsp;-->
-            <!---->
-            <!--<a href="/tag/xctest">xctest</a>&nbsp;-->
+            <!--<a href="/tag/arc">arc</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
