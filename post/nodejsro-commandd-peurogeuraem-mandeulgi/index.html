@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>git server 만들기 |  niceilm's devnote</title>
+    <title>nodejs로 command 프로그램 만들기 |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 9월 23일 월요일 오후 2시 48분</span>
+                                <span class="time">2014년 3월 2일 일요일 오후 9시 36분</span>
                             </p>
-                            <h1>git server 만들기</h1>
+                            <h1>nodejs로 command 프로그램 만들기</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="git server 만들기 -" data-url="http://page.niceilm.net/post/make-git-server" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="nodejs로 command 프로그램 만들기 -" data-url="http://page.niceilm.net/post/nodejsro-commandd-peurogeuraem-mandeulgi" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/make-git-server"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/nodejsro-commandd-peurogeuraem-mandeulgi"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,27 +150,48 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_136">target folder</h1>
-<p><strong>git_test_project</strong> <code>git init</code> 을 한 경우</p>
-<h1 id="toc_137">command</h1>
-<pre><code class=""><span class="title">git</span> clone <span class="comment">--bare git_test_project</span>
-<span class="title">scp</span> -r ./git_test_project.git niceilm@niceilm.net:/git/git_test_project.git
-<span class="title">git</span> remote add origin niceilm@niceilm.net:/git/git_test_project.git
-<span class="title">git</span> pull
-<span class="title">git</span> branch <span class="comment">--set-upstream-to=origin/master</span>
+                            <p>쉘스크립트를 작성할 때 nodejs를 이용하면 신세계다.</p><p>npm을 통해서 다양한 모듈을 가져다 쓸 수 있고 npm을 통해서 만든 쉘스크립트를 배포도 가능하다.</p>
+<h2 id="toc_140">nodejs용 실행 파일 파일 만들기</h2>
+<p>파일 최상단에 아래 코드를 추가하면 실행할 수 있는 파일이 된다.  </p><pre><code class=""><span class="shebang">#!/usr/local/bin/node</span>
+</code></pre><p><a href="https://www.npmjs.org/doc/json.html#bin">https://www.npmjs.org/doc/json.html#bin</a><br>
+package.json에 bin 프로퍼티로 해당 파일의 패스를 추가한다.  </p><pre><code class="">{ "<span class="attribute">name</span>": <span class="value"><span class="string">"my-program"</span>
+</span>, "<span class="attribute">version</span>": <span class="value"><span class="string">"1.2.5"</span>
+</span>, "<span class="attribute">bin</span>": <span class="value"><span class="string">"./path/to/program"</span> }</span>
+</code></pre>
+<h2 id="toc_141">Library</h2>
+
+<h3 id="toc_142">Commander</h3>
+<p><a href="http://visionmedia.github.io/commander.js">http://visionmedia.github.io/commander.js</a><br>
+커맨드 명령어 만들기 쉽게 해주는 라이브러리</p>
+<h3 id="toc_143">Prompt</h3>
+<p><a href="https://github.com/flatiron/prompt">https://github.com/flatiron/prompt</a><br>
+사용자 인터렉션은 이 라이브러리를 활용</p>
+<h3 id="toc_144">nconf</h3>
+<p><a href="https://github.com/flatiron/nconf">https://github.com/flatiron/nconf</a><br>
+설정 정보는 nconf 라이브러리를 이용하면 설정을 파일로 만들거나 파일에서 설정을 읽을 수 있다.</p>
+<h3 id="toc_145">handlebars</h3>
+<p><a href="https://github.com/wycats/handlebars.js">https://github.com/wycats/handlebars.js</a><br>
+템플릿 엔진은 handlebars를 이용했다.</p>
+<h2 id="toc_146">npm 배포하기</h2>
+<p><a href="http://blog.outsider.ne.kr/829">http://blog.outsider.ne.kr/829</a>
+만든 모듈을 배포해보자.  </p><pre><code class=""><span class="comment">// npm에 등록한다.</span>
+$ npm adduser
+
+<span class="comment">// 만든 모듈을 배포한다.</span>
+$ npm publish
 </code></pre>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/nodejsro-commandd-peurogeuraem-mandeulgi" class="button next">nodejs로 command 프로그램 만들기<i class="icon"></i></a>
+                                <a href="/post/npm-dependency-patch" class="button next">package.json의 dependency 모듈 패치<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/less" class="button prev"><i class="icon"></i> less</a>
+                                <a href="/post/make-git-server" class="button prev"><i class="icon"></i> git server 만들기</a>
                             </div>
                             
                         </div>
@@ -379,7 +400,7 @@
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/git">git</a>&nbsp;-->
+            <!--<a href="/tag/nodejs">nodejs</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
