@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>python |  niceilm's devnote</title>
+    <title>iOS AFNetworking FileUpload Issue |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 10월 5일 토요일 오후 7시 00분</span>
+                                <span class="time">2014년 3월 2일 일요일 오후 10시 58분</span>
                             </p>
-                            <h1>python</h1>
+                            <h1>iOS AFNetworking FileUpload Issue</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="python -" data-url="http://page.niceilm.net/post/python" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="iOS AFNetworking FileUpload Issue -" data-url="http://page.niceilm.net/post/ios-afnetworking-fileupload-issue" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/python"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/ios-afnetworking-fileupload-issue"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,40 +150,33 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_172">python</h1>
-
-<h1 id="toc_173">Articles</h1>
-
-<ul>
-<li><strong><em>NEW</em></strong> <a href="http://j.mp/15LFDNo" title="9/9">파이썬 10 분만에 배우기</a>
-
-<ul>
-<li>원문 : <a href="http://www.stavros.io/tutorials/python/">Tutorial - Learn Python in 10 minutes</a></li>
-</ul></li>
-<li><a href="http://songhun.blogspot.kr/2011/12/python-ecosystem-introduction.html">Python Ecosystem - An Introduction</a>
-
-<ul>
-<li> 원문 : <a href="http://mirnazim.org/writings/python-ecosystem-introduction/">Python Ecosystem - An Introduction</a></li>
-</ul></li>
-<li><a href="http://kswa.codingstar.net:14705/html/">Flask 0.9 documentation</a>
-
-<ul>
-<li>원문 : <a href="http://flask.pocoo.org/docs/">Flask documentation</a></li>
-</ul></li>
-</ul>
-
+                            <p>한참 삽질하다가 해결책을 찾아서 공유합니다.
+파일업로드 쪽 API가 에러를 제대로 뱉어 주지 않아서 직접 파일업로드 백엔드도 구축하고 테스트 했습니다ㅠㅜ</p><pre><code class="">+ (void)<span class="method">uploadProfileImageWithData:</span>(<span class="class">NSData</span> *)imageData <span class="method">success:</span>(<span class="class">NetworkSuccess</span>)success <span class="method">failure:</span>(<span class="class">NetworkError</span>)failure {
+    <span class="class">AFHTTPRequestOperationManager</span> *manager = [<span class="class">AFHTTPRequestOperationManager</span> manager];
+    <span class="class">NSDictionary</span> *parameters = @{@<span class="comment">"access_token"</span> : @<span class="comment">"인증토큰"</span>};
+    manager.responseSerializer = [<span class="class">AFHTTPResponseSerializer</span> serializer];
+    [manager <span class="class">POST</span>:<span class="class">UPLOAD_PROFILE</span> <span class="method">parameters:</span>parameters <span class="method">constructingBodyWithBlock:</span>^(id &lt;<span class="class">AFMultipartFormData</span>&gt; formData) {
+[formData <span class="method">appendPartWithFileData:</span>imageData <span class="method">name:</span>@<span class="comment">"upload"</span> <span class="method">fileName:</span>@<span class="comment">"profile.jpg"</span> <span class="method">mimeType:</span>@<span class="comment">"image/jpeg"</span>];
+// 이 부분을 추가한다.
+[formData <span class="method">appendPartWithFormData:</span>[[<span class="class">NSNumber</span> <span class="method">numberWithInt:</span>imageData.length].stringValue <span class="method">dataUsingEncoding:</span><span class="class">NSUTF8StringEncoding</span>] <span class="method">name:</span>@<span class="comment">"filelength"</span>];
+}     <span class="method">success:</span>success
+          <span class="method">failure:</span>failure];
+}
+</code></pre><p>Simulator에서는 업로드가 잘되었는데 Device에서 업로드가 되지 않아서 볼드 처리한 부분을 추가했더니 잘 되네요.
+혹시 비슷한 이슈가 있으면 도움이 되길 바랍니다.</p><p>비슷한 이슈가 이미 리포팅 되어 있네요.
+<a href="https://github.com/AFNetworking/AFNetworking/issues/1510">https://github.com/AFNetworking/AFNetworking/issues/1510</a></p>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/xctestassertions" class="button next">XCTestAssertions<i class="icon"></i></a>
+                                <a href="/post/ios-autolayout-warning" class="button next">iOS AutoLayout Warning<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/osx-dic" class="button prev"><i class="icon"></i> osx 영한/한영사전 사용하기</a>
+                                <a href="/post/harupeureseu-opeun" class="button prev"><i class="icon"></i> 하루프레스 오픈</a>
                             </div>
                             
                         </div>
@@ -402,7 +395,7 @@
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/python">python</a>&nbsp;-->
+            <!--<a href="/tag/ios">ios</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
