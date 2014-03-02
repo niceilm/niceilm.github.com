@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[niceilm's devnote]]></title><description><![CDATA[to be full stack programmer]]></description><link>http://page.niceilm.net</link><image><url>http://page.niceilm.net/public/img/favorite.png</url><title>niceilm&apos;s devnote</title><link>http://page.niceilm.net</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Mar 2014 14:00:21 GMT</lastBuildDate><atom:link href="http://page.niceilm.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[iOS AFNetworking FileUpload Issue]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><p>한참 삽질하다가 해결책을 찾아서 공유합니다.
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[niceilm's devnote]]></title><description><![CDATA[to be full stack programmer]]></description><link>http://page.niceilm.net</link><image><url>http://page.niceilm.net/public/img/favorite.png</url><title>niceilm&apos;s devnote</title><link>http://page.niceilm.net</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Mar 2014 14:03:27 GMT</lastBuildDate><atom:link href="http://page.niceilm.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[iOS AFNetworking FileUpload Issue]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><p>한참 삽질하다가 해결책을 찾아서 공유합니다.
 파일업로드 쪽 API가 에러를 제대로 뱉어 주지 않아서 직접 파일업로드 백엔드도 구축하고 테스트 했습니다ㅠㅜ</p><pre><code class="">+ (void)<span class="method">uploadProfileImageWithData:</span>(<span class="class">NSData</span> *)imageData <span class="method">success:</span>(<span class="class">NetworkSuccess</span>)success <span class="method">failure:</span>(<span class="class">NetworkError</span>)failure {
     <span class="class">AFHTTPRequestOperationManager</span> *manager = [<span class="class">AFHTTPRequestOperationManager</span> manager];
     <span class="class">NSDictionary</span> *parameters = @{@<span class="comment">"access_token"</span> : @<span class="comment">"인증토큰"</span>};
@@ -13,9 +13,9 @@
 }
 </code></pre><p>Simulator에서는 업로드가 잘되었는데 Device에서 업로드가 되지 않아서 볼드 처리한 부분을 추가했더니 잘 되네요.
 혹시 비슷한 이슈가 있으면 도움이 되길 바랍니다.</p><p>비슷한 이슈가 이미 리포팅 되어 있네요.
-<a href="https://github.com/AFNetworking/AFNetworking/issues/1510">https://github.com/AFNetworking/AFNetworking/issues/1510</a></p>]]></description><link>http://page.niceilm.net/post/ios-afnetworking-fileupload-issue</link><guid isPermaLink="false">ios-afnetworking-fileupload-issue</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[python]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_174">python</h1>
+<a href="https://github.com/AFNetworking/AFNetworking/issues/1510">https://github.com/AFNetworking/AFNetworking/issues/1510</a></p>]]></description><link>http://page.niceilm.net/post/ios-afnetworking-fileupload-issue</link><guid isPermaLink="false">ios-afnetworking-fileupload-issue</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[python]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_175">python</h1>
 
-<h1 id="toc_175">Articles</h1>
+<h1 id="toc_176">Articles</h1>
 
 <ul>
 <li><strong><em>NEW</em></strong> <a href="http://j.mp/15LFDNo" title="9/9">파이썬 10 분만에 배우기</a>
@@ -34,12 +34,12 @@
 <li>원문 : <a href="http://flask.pocoo.org/docs/">Flask documentation</a></li>
 </ul></li>
 </ul>
-]]></description><link>http://page.niceilm.net/post/python</link><guid isPermaLink="false">python</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[osx 영한/한영사전 사용하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_169">osx 영한/한영사전 사용하기</h1>
+]]></description><link>http://page.niceilm.net/post/python</link><guid isPermaLink="false">python</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[osx 영한/한영사전 사용하기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_170">osx 영한/한영사전 사용하기</h1>
 
-<h2 id="toc_170">DictUnifier</h2>
+<h2 id="toc_171">DictUnifier</h2>
 <p><a href="http://code.google.com/p/mac-dictionary-kit/">http://code.google.com/p/mac-dictionary-kit/</a></p><p>사전 소스를 osx  사전으로 변환해주는 툴입니다. 오픈소스입니다.</p>
-<h2 id="toc_171">한글 오픈 사전 소스</h2>
-<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>]]></description><link>http://page.niceilm.net/post/osx-dic</link><guid isPermaLink="false">osx-dic</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[package.json의 dependency 모듈 패치]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_162">package.json의 dependency 모듈 패치</h1>
+<h2 id="toc_172">한글 오픈 사전 소스</h2>
+<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>]]></description><link>http://page.niceilm.net/post/osx-dic</link><guid isPermaLink="false">osx-dic</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[package.json의 dependency 모듈 패치]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_163">package.json의 dependency 모듈 패치</h1>
 <p>passport-ldap을 이용해서 ldap을 연동했는데 한 가지 이슈가 발생했다.<br>
 passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이 아니라서 발생한 이슈가 있었다.  </p><p>이를 해결하기 위해서 passport-ldap의 package.json의 ldapjs 버전을 수정해주면 손쉽게 해결이 된다.<br>
 문제는 이 모듈을 일단 배포를 해야 하는데…<br>
@@ -47,17 +47,17 @@ passport-ldap에 의존성이 있는 ldapjs 모듈의 버전이 최신 버전이
     <span class="string">"passport-ldap"</span>: <span class="string">"git://github.com/niceilm/passport-ldap.git#650a58cfa80296092b23adf57866683229dcdf31"</span>,
 <span class="keyword">...</span>
 </code></pre>
-<h1 id="toc_163">관련링크</h1>
+<h1 id="toc_164">관련링크</h1>
 <p><a href="https://npmjs.org/doc/json.html">https://npmjs.org/doc/json.html</a></p>]]></description><link>http://page.niceilm.net/post/npm-dependency-patch</link><guid isPermaLink="false">npm-dependency-patch</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item><item><title><![CDATA[nodejs로 command 프로그램 만들기]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/d530e2780b7540c0a74456aa754cd7b3?r=pg&s=48.jpg&d=identicon"><br/><p>쉘스크립트를 작성할 때 nodejs를 이용하면 신세계다.</p><p>npm을 통해서 다양한 모듈을 가져다 쓸 수 있고 npm을 통해서 만든 쉘스크립트를 배포도 가능하다.</p>
-<h2 id="toc_157">nodejs용 실행 파일 파일 만들기</h2>
+<h2 id="toc_158">nodejs용 실행 파일 파일 만들기</h2>
 <p>파일 최상단에 아래 코드를 추가하면 실행할 수 있는 파일이 된다.  </p><pre><code class=""><span class="shebang">#!/usr/local/bin/node</span>
 </code></pre><p><a href="https://www.npmjs.org/doc/json.html#bin">https://www.npmjs.org/doc/json.html#bin</a><br>
 package.json에 bin 프로퍼티로 해당 파일의 패스를 추가한다.  </p><pre><code class="">{ "<span class="attribute">name</span>": <span class="value"><span class="string">"my-program"</span>
 </span>, "<span class="attribute">version</span>": <span class="value"><span class="string">"1.2.5"</span>
 </span>, "<span class="attribute">bin</span>": <span class="value"><span class="string">"./path/to/program"</span> }</span>
 </code></pre>
-<h2 id="toc_158">Library</h2>
+<h2 id="toc_159">Library</h2>
 
-<h3 id="toc_159">Commander</h3>
+<h3 id="toc_160">Commander</h3>
 <p><a href="http://visionmedia.github.io/commander.js">http://visionmedia.github.io/commander.js</a><br>
 커맨드 명령어 만들기 쉽게 해주는 라이브러리</p>]]></description><link>http://page.niceilm.net/post/nodejs-command</link><guid isPermaLink="false">nodejs-command</guid><dc:creator><![CDATA[<a href="niceilm" target="_blank">niceilm</a>]]></dc:creator><pubDate>Invalid Date</pubDate></item></channel></rss>
