@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>osx 영한/한영사전 사용하기 |  niceilm's devnote</title>
+    <title>angularjs에서 item-service protocol 출력하기 |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2013년 8월 22일 목요일 오후 9시 00분</span>
+                                <span class="time">2014년 3월 2일 일요일 오후 8시 19분</span>
                             </p>
-                            <h1>osx 영한/한영사전 사용하기</h1>
+                            <h1>angularjs에서 item-service protocol 출력하기</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="osx 영한/한영사전 사용하기 -" data-url="http://page.niceilm.net/post/osx-dic" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="angularjs에서 item-service protocol 출력하기 -" data-url="http://page.niceilm.net/post/angularjs-item-service-protocol" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/osx-dic"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/angularjs-item-service-protocol"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,47 +150,40 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_144">osx 영한/한영사전 사용하기</h1>
+                            <h2 id="toc_41">이슈</h2>
+<p>ng-href에서 item-service 프로토콜을 unsafe라는 prefix가 추가가 되어서 해결책을 찾아보았다.</p><pre><code class="">&lt;a href=<span class="string">"unsafe:item-service:..."</span>&gt;<span class="keyword">...</span>&lt;/a&gt;
+</code></pre>
+<h2 id="toc_42">해결 방법</h2>
 
-<h2 id="toc_145">DictUnifier</h2>
-<p><a href="http://code.google.com/p/mac-dictionary-kit/">http://code.google.com/p/mac-dictionary-kit/</a></p><p>사전 소스를 osx  사전으로 변환해주는 툴입니다. 오픈소스입니다.</p>
-<h2 id="toc_146">한글 오픈 사전 소스</h2>
-<p><a href="http://abloz.com/huzheng/stardict-dic/ko/">http://abloz.com/huzheng/stardict-dic/ko/</a></p><p>오픈되어 있는 사전소스입니다.</p>
-<h2 id="toc_147">변환</h2>
-
-<ol>
-<li>DictUnifier를 실행합니다.<br>
-<img src="./@img/001.png" alt=""></li>
-<li>다운로드 받은 stardict-quick_eng-kor-*.tar.bz2 파일을 드래그앤드롭으로 떨굽니다.<br>
-<img src="./@img/002.png" alt=""></li>
-<li>변환하는데 생각보다 조금더 걸립니다.<br>
-<img src="./@img/003.png" alt=""></li>
-<li>변환이 완료되었습니다.</li>
-</ol>
-
-<h2 id="toc_148">확인</h2>
-
-<ol>
-<li>사전앱을 실행합니다.<br>
-<img src="./@img/004.png" alt=""></li>
-<li>환경설정을 통해서 추가된 사전의 위치를 변경합니다.<br>
-<img src="./@img/005.png" alt=""></li>
-<li>간단히 단어를 검색해 봅니다.<br>
-<img src="./@img/006.png" alt=""></li>
-</ol>
-
+<h3 id="toc_43">angularjs(1.2.7)의 기본 허용 프로토콜</h3>
+<pre><code class=""><span class="javadoc">/**
+ * <span class="javadoctag">@description</span>
+ * Private service to sanitize uris for links and images. Used by $compile and $sanitize.
+ */</span>
+function $$SanitizeUriProvider() {
+  <span class="keyword">var</span> aHrefSanitizationWhitelist = /^\s*(https?|ftp|mailto|tel|file):/,
+    imgSrcSanitizationWhitelist = /^\s*(https?|ftp|file):|data:image\<span class="comment">//;</span>
+...
+</code></pre>
+<h3 id="toc_44">허용 프로토콜 추가 방법</h3>
+<pre><code class="">  app.config([<span class="string">'$compileProvider'</span>, <span class="keyword">function</span>($compileProvider){
+$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|itms-services):/);
+<span class="keyword">...</span>
+</code></pre>
+<h2 id="toc_45">참조</h2>
+<p><a href="http://stackoverflow.com/questions/15606751/angular-changes-urls-to-unsafe-in-extension-page">http://stackoverflow.com/questions/15606751/angular-changes-urls-to-unsafe-in-extension-page</a></p>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/python" class="button next">python<i class="icon"></i></a>
+                                <a href="/post/arc-jiweonhaji-anhneun-modyul-keompailsi" class="button next">arc 지원하지 않는 모듈 컴파일시<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/npm-dependency-patch" class="button prev"><i class="icon"></i> package.json의 dependency 모듈 패치</a>
+                                <a href="/post/android-stack" class="button prev"><i class="icon"></i> Android Stack</a>
                             </div>
                             
                         </div>
@@ -394,7 +387,7 @@
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/osx">osx</a>&nbsp;-->
+            <!--<a href="/tag/angularjs">angularjs</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
