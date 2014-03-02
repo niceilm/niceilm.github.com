@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSONKit ios7 error |  niceilm's devnote</title>
+    <title>iOS AutoLayout Warning |  niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -124,20 +124,20 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">2014년 2월 3일 월요일 오후 8시 53분</span>
+                                <span class="time">2014년 3월 2일 일요일 오후 10시 54분</span>
                             </p>
-                            <h1>JSONKit ios7 error</h1>
+                            <h1>iOS AutoLayout Warning</h1>
                         </div>
 
                         <div class="pull-right social-area">
                             
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="JSONKit ios7 error -" data-url="http://page.niceilm.net/post/jsonkit-ios7-error" data-via="niceilm">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ko" data-text="iOS AutoLayout Warning -" data-url="http://page.niceilm.net/post/ios-autolayout-warning" data-via="niceilm">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                             
 
                             
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/jsonkit-ios7-error"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial" data-href="http://page.niceilm.net/post/ios-autolayout-warning"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -150,26 +150,33 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <p>JSONKit 이 iOS7프로젝트에서 컴파일시 오류가 발생하면 아래와 같이 프로젝트 세팅을 변경하면 된다.</p>
-<ol>
-<li>프로젝트를 선택한다.</li>
-<li>Build Phases 선택 -&gt; Compile Sources</li>
-<li><code>-fno-objc-arc</code>  JSONKit.m 컴파일 옵션을 추가</li>
-<li>Build Settings -&gt; Apple LLVM 5.0 Warnings - All languages -&gt; Direct usage of &#39;isa&#39; 을 찾고 &#39;No&#39;로 변경</li>
-</ol>
-
+                            <h2 id="toc_115">현상</h2>
+<p>Warning의 내용을 보면 높이 계산하기가 이상하다고 나온다.</p>
+<h2 id="toc_116">고민</h2>
+<p>AutoLayout 특성상 각 뷰마다 서로의 관계를 지정해주면 자동으로 계산해 주는데 왜 그럴까 고민을 계속 했다.(주말동안 왕좌의 게임을 보면서 머리를 식히고 나니...)</p>
+<h2 id="toc_117">해결방법</h2>
+<p>높이를 결정하는 코드에서 가장 나중에 계산 되어야 할 부분의 Priority를 낮게 변경함으로써 문제가 해결이 되었다.</p>
+<h2 id="toc_118">결론</h2>
+<p>AutoLayout은 iOS UI개발에 있어서 가장 손이 많이 가는 좌표 계산의 노고를 덜어주는 유용한 속성이다.
+이 유용한 속성의 특징을 잘 알아둬야 한다는 결론을 내린다.</p>
+<h2 id="toc_119">AutoLayout 참고링크</h2>
+<p><a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html">https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html</a>
+<a href="http://www.raywenderlich.com/50317/beginning-auto-layout-tutorial-in-ios-7-part-1">http://www.raywenderlich.com/50317/beginning-auto-layout-tutorial-in-ios-7-part-1</a>
+<a href="http://www.raywenderlich.com/50319/beginning-auto-layout-tutorial-in-ios-7-part-2">http://www.raywenderlich.com/50319/beginning-auto-layout-tutorial-in-ios-7-part-2</a>
+<a href="http://www.raywenderlich.com/ko/21139/ios-6%EC%97%90%EC%84%9C-%EC%98%A4%ED%86%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%ED%8C%8C%ED%8A%B8-1-1">http://www.raywenderlich.com/ko/21139/ios-6%EC%97%90%EC%84%9C-%EC%98%A4%ED%86%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%ED%8C%8C%ED%8A%B8-1-1</a>
+<a href="http://www.raywenderlich.com/ko/22964/ios-6%EC%97%90%EC%84%9C-%EC%98%A4%ED%86%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%ED%8C%8C%ED%8A%B8-1-2">http://www.raywenderlich.com/ko/22964/ios-6%EC%97%90%EC%84%9C-%EC%98%A4%ED%86%A0-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%ED%8C%8C%ED%8A%B8-1-2</a></p>
                         </div>
                                             
                         <div class="meta clearfix">
                             
                             <div class="pull-right prev-next">
-                                <a href="/post/karma" class="button next">karma<i class="icon"></i></a>
+                                <a href="/post/ios-weongyeogji-baepohagi" class="button next">iOS 웹사이트에서 앱 배포하기<i class="icon"></i></a>
                             </div>
                             
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/iterm2-connect-server" class="button prev"><i class="icon"></i> iTerm2 시작할 때 서버 접속 방법</a>
+                                <a href="/post/harupeureseu-opeun" class="button prev"><i class="icon"></i> 하루프레스 오픈</a>
                             </div>
                             
                         </div>
@@ -384,8 +391,6 @@
             <!--<strong>tags</strong> :-->
             <!---->
             <!--<a href="/tag/ios">ios</a>&nbsp;-->
-            <!---->
-            <!--<a href="/tag/JSONKit">JSONKit</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
