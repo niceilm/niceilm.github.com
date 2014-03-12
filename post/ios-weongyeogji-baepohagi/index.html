@@ -166,8 +166,8 @@
 <strong>Title명 작성 후 Save</strong>  </p>
 <h1 id="toc_127">웹사이트에서 앱 배포하기</h1>
 <p>archive를 통해 생성한 두개의 파일을 원격 서버 업로드 함<br>
-iOS앱은 아래와 같이 작성해야 원격에서 배포가 가능  </p><pre><code class=""><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"itms-services://?action=download-manifest&amp;url=http://웹주소/download/앱명.plist"</span>&gt;</span>앱이름<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-</code></pre>
+iOS앱은 아래와 같이 작성해야 원격에서 배포가 가능  </p><pre><code class=""><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"itms-services://?action=download-manifest&amp;url=https://웹주소/download/앱명.plist"</span>&gt;</span>앱이름<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre><p><strong>iOS7.1로 변경되면서 itms-services 프로토콜 내에서 다운로드 url의 프로토콜을 꼭 https로 해야 한다.</strong></p>
                         </div>
                                             
                         <div class="meta clearfix">
