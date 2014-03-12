@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Kinds of bower |  niceilm's devnote</title>
+    <title>MEAN niceilm's devnote</title>
     <meta name="description" content="to be full stack programmer">
     <meta name="author" content="niceilm">
     <meta name="keywords" content="javascript,css,html,nodejs,ios,android,java" />
@@ -35,12 +35,8 @@
     <!-- Le javascript -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.jsonp.js"></script>
-    <script src="/js/mustache.js"></script>
-    <script src="/js/apps/github.js"></script>
-    <script src="/js/apps/twitter.js"></script>
+    <script src="/js/apps/toc.js"></script>
 </head>
-
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
     <div class="navbar navbar-fixed-top">
@@ -118,57 +114,69 @@
     </div>
 </div>
 
-    <div class="container">
-    <div class="row">
-        <div class="span9 articles">
-            <div class="well bg">
-                <div class="page-header">
-                    <h1>Category : <small>JavaScript</small> <span class="badge badge-info">1</span></h1>
-                </div>
+    
+<link href="/css/code/default.css" rel="stylesheet">
 
-                <ul class="lists">
-                    
-                    <li>
-                        <h3>
-                            <a href="/post/bower">bower</a> 
-                        </h3>
-                        <small>by niceilm / 2013년 10월 5일 토요일 오후 7시 00분</small>
+<div class="container page-page">
+    <div class="row">
+        <div class="span12">
+            <div class="well markdown-wrapper">
+                <ul class="unstyled share pull-right">
+                    <li class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://page.niceilm.net/mean/" data-via="niceilm" data-hashtags="mean">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!--a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script-->
                     </li>
-                    
+                    <li class="facebook">
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) {return;}
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-href="http://page.niceilm.net/mean/"></div>
+                    </li>
+                    <li class="google">
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                        <g:plusone size="medium"></g:plusone>
+                    </li>
                 </ul>
+                <p>[toc]</p>
+<h1 id="toc_325">NodeJS</h1>
+<p>Javascript BackEnd Platform</p>
+<h2 id="toc_326">Home</h2>
+<p><a href="http://nodejs.org/">http://nodejs.org/</a></p>
+<h2 id="toc_327">API Docs</h2>
+<p><a href="http://nodejs.sideeffect.kr/docs/">http://nodejs.sideeffect.kr/docs/</a></p>
+<h2 id="toc_328">NPM</h2>
+<p><a href="https://www.npmjs.org/">https://www.npmjs.org/</a>
+nodejs maven 생각하면 편함</p>
+<h2 id="toc_329">OpenSource 추천하는 곳</h2>
+<p><a href="https://nodejsmodules.org/">https://nodejsmodules.org/</a></p>
+<h2 id="toc_330">One page navigation guide</h2>
+<p><a href="http://octoberskyjs.github.io/home/">http://octoberskyjs.github.io/home/</a></p>
+<h2 id="toc_331">[강추]node.js guide page</h2>
+<p><a href="http://nodeqa.com/">http://nodeqa.com/</a></p>
+<h1 id="toc_332">ExpressJS</h1>
+<p>web application framework for node</p>
+<h2 id="toc_333">Home</h2>
+<p><a href="http://expressjs.com/">http://expressjs.com/</a></p>
+<h1 id="toc_334">AngularJS</h1>
+<p>Javascript Framework</p>
+<h2 id="toc_335">Home</h2>
+<p><a href="http://www.angularjs.org/">http://www.angularjs.org/</a></p>
+<h2 id="toc_336">OpenSource 추천하는 곳</h2>
+<p><a href="http://ngmodules.org/">http://ngmodules.org/</a></p>
+<h2 id="toc_337">One Page Guide</h2>
+<p><a href="http://mobicon.tistory.com/281">http://mobicon.tistory.com/281</a></p>
+<h1 id="toc_338">MongoDB</h1>
+<p>NoSQL</p>
+<h2 id="toc_339">Home</h2>
+<p><a href="http://www.mongodb.org/">http://www.mongodb.org/</a></p>
             </div>
-        </div>
-        <div class="span3 side">
-            			<div class="well category">
-                <ul class="nav nav-list">
-                    <li class="nav-header title">Categories</li>
-                    <li class="active"><a href="/category">Home</a></li>
-                    
-                    <li><a href="/category/ios">ios</a></li>
-                    
-                    <li><a href="/category/android">android</a></li>
-                    
-                    <li><a href="/category/angularjs">angularjs</a></li>
-                    
-                    <li><a href="/category/bower">bower</a></li>
-                    
-                    <li><a href="/category/tip">tip</a></li>
-                    
-                    <li><a href="/category/nodejs">nodejs</a></li>
-                    
-                    <li><a href="/category/life">life</a></li>
-                    
-                    <li><a href="/category/less">less</a></li>
-                    
-                    <li><a href="/category/git">git</a></li>
-                    
-                    <li><a href="/category/osx">osx</a></li>
-                    
-                    <li><a href="/category/python">python</a></li>
-                    
-                </ul>
-            </div>
-                
         </div>
     </div>
 </div><!-- /container -->
@@ -186,6 +194,29 @@
 	</div>
 </footer>
 
+    <script>
+        // fix sub nav on scroll
+        var $win = $(window)
+          , $nav = $('.subnav')
+          , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+          , isFixed = 0
+
+        processScroll()
+
+        $win.on('scroll', processScroll)
+
+        function processScroll() {
+          var i, scrollTop = $win.scrollTop()
+          if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1
+            $nav.addClass('subnav-fixed')
+          } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0
+            $nav.removeClass('subnav-fixed')
+          }
+        }
+    </script>
+    
     
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -200,6 +231,6 @@
     </script>
 
 
-
+    
 </body>
 </html>
